@@ -44,6 +44,11 @@ public class Instantiation implements CommandLineRunner {
                 "...o que aconteceu aqui, diga a eles que o Norte se lembra", new AuthorDTO(arya));
 
         postRepository.saveAll(Arrays.asList(post1, post2));
+
+        jon.setPosts(Arrays.asList(post1));
+        arya.setPosts(Arrays.asList(post2));
+
+        userRepository.saveAll(Arrays.asList(jon, arya));
     }
 
 }
